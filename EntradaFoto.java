@@ -14,8 +14,7 @@ import java.time.temporal.ChronoUnit;
  *  @author DAM
  *  @version 1.0
  */
-public class EntradaFoto
-{
+public class EntradaFoto  extends Entrada {
     // Usuario que crea la entrada.
     private String usuario;
     // URL de la imagen.
@@ -38,6 +37,7 @@ public class EntradaFoto
      * @param url URL de la imagen.
      */
     public EntradaFoto (String autor, String url, String titulo) {
+        super();
         usuario = autor;
         urlImagen = url;
         this.titulo = titulo;

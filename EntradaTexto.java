@@ -14,8 +14,7 @@ import java.time.temporal.ChronoUnit;
  *  @version 1.0
  */
 
-public class EntradaTexto
-{
+public class EntradaTexto extends Entrada {
     // Usuario que crea la entrada.
     private String usuario;
     // Contenido de la entrada.
@@ -35,6 +34,7 @@ public class EntradaTexto
      * @param mensaje Contenido de la entrada.
      */
     public EntradaTexto (String autor, String texto) {
+        super();
         usuario = autor;
         mensaje = texto;
         momentoPublicacion = LocalDateTime.now();
