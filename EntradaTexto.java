@@ -33,9 +33,8 @@ public class EntradaTexto extends Entrada {
      * @param autor Autor de la entrada.
      * @param mensaje Contenido de la entrada.
      */
-    public EntradaTexto (String autor, String texto) {
-        super();
-        usuario = autor;
+    public EntradaTexto (String usuario, String texto) {
+        super(usuario);
         mensaje = texto;
         momentoPublicacion = LocalDateTime.now();
         cantidadMeGusta = 0;
@@ -72,7 +71,16 @@ public class EntradaTexto extends Entrada {
     public LocalDateTime getMomentoPublicacion() {
         return momentoPublicacion;
     }
-
+    
+    
+    public String mostrarAutorYMensaje() {
+        String aDevolver = "";
+        aDevolver += "Autor: " + getUsuario() + "\n";
+        aDevolver += "Mensaje: " + getMensaje();
+        System.out.println(aDevolver);
+        return aDevolver;
+    }
+    
     /**
      * Devuelve una cadena con toda la informacion de la entrada.
      * @return Devuelve una cadena con toda la informacion de la entrada.

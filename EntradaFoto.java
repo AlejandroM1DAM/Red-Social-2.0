@@ -36,9 +36,8 @@ public class EntradaFoto  extends Entrada {
      * @param titulo Titulo de la imagen.
      * @param url URL de la imagen.
      */
-    public EntradaFoto (String autor, String url, String titulo) {
-        super();
-        usuario = autor;
+    public EntradaFoto (String usuario, String url, String titulo) {
+        super(usuario);
         urlImagen = url;
         this.titulo = titulo;
         momentoPublicacion = LocalDateTime.now();
